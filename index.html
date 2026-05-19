@@ -1,173 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Trading Learning Community</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;800&display=swap" rel="stylesheet">
+
 <style>
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Poppins', sans-serif;
+}
+
 body{
-background:#0f172a;
-margin:0;
-font-family:Poppins,sans-serif;
-display:flex;
-justify-content:center;
-align-items:center;
-min-height:100vh;
+    background:linear-gradient(135deg,#0f172a,#1e3a8a);
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    min-height:100vh;
 }
 
+/* CONTAINER */
 .container{
-width:100%;
-max-width:420px;
-margin:auto;
-padding:30px 25px;
-border-radius:18px;
-background:rgba(255,255,255,0.05);
-backdrop-filter:blur(12px);
-border:1px solid rgba(255,255,255,0.08);
-box-shadow:0 20px 60px rgba(0,0,0,0.6);
-text-align:center;
-color:#fff;
+    width:90%;
+    max-width:380px;
+    background:rgba(255,255,255,0.05);
+    backdrop-filter:blur(15px);
+    border-radius:20px;
+    padding:25px;
+    text-align:center;
+    color:white;
+    box-shadow:0 10px 30px rgba(0,0,0,0.4);
 }
 
-/* LOGO CENTER FIX */
-.logo-box{
-display:flex;
-justify-content:center;
-margin-bottom:12px;
+/* PROFILE IMAGE */
+.profile{
+    width:80px;
+    height:80px;
+    border-radius:50%;
+    border:3px solid #38bdf8;
+    margin-bottom:15px;
+    object-fit:cover;
 }
 
-.logo{
-width:80px;
-height:80px;
-border-radius:50%;
-border:2px solid #FFD700;
-}
-
-/* TEXT */
+/* HEADING */
 h1{
-font-size:22px;
-color:#FFD700;
-margin-bottom:6px;
-}
-
-h2{
-font-size:15px;
-opacity:0.9;
-margin-bottom:10px;
+    font-size:22px;
+    font-weight:700;
+    margin-bottom:8px;
 }
 
 .sub{
-font-size:13px;
-opacity:0.75;
-margin-bottom:15px;
-}
-
-/* VIDEO */
-.video iframe{
-width:100%;
-height:200px;
-border-radius:12px;
+    font-size:13px;
+    opacity:0.8;
+    margin-bottom:15px;
 }
 
 /* BUTTON */
-.btn{
-display:block;
-text-decoration:none;
-background:#22c55e;
-color:#000;
-font-weight:700;
-padding:16px;
-border-radius:10px;
-margin:12px 0;
-transition:0.3s;
-}
-.btn:hover{
-background:#16a34a;
-transform:scale(1.03);
+a.btn{
+    display:block;
+    width:100%;
+    padding:14px;
+    margin:12px 0;
+    border-radius:50px;
+    font-size:16px;
+    font-weight:600;
+    text-decoration:none;
+    background:linear-gradient(135deg,#38bdf8,#4ade80);
+    color:#000;
+    transition:0.3s;
 }
 
-/* TRUST */
-.trust{
-background:rgba(0,255,150,0.08);
-padding:10px;
-border-radius:10px;
-font-size:13px;
-margin-bottom:15px;
-border:1px solid rgba(0,255,150,0.2);
+a.btn:hover{
+    transform:scale(1.05);
+    box-shadow:0 0 15px #4ade80;
 }
 
 /* POINTS */
 .points{
-font-size:14px;
-text-align:left;
-margin:15px 0;
-line-height:1.7;
+    text-align:left;
+    margin-top:10px;
+    font-size:14px;
+    line-height:1.8;
 }
 
-/* RISK */
-.risk{
-margin-top:10px;
-font-size:11px;
-opacity:0.6;
-line-height:1.5;
+.points span{
+    display:block;
 }
 
 /* FOOTER */
 .footer{
-margin-top:20px;
-font-size:12px;
-opacity:0.6;
+    margin-top:15px;
+    font-size:11px;
+    opacity:0.7;
+    line-height:1.5;
 }
-.footer a{
-color:#38bdf8;
-text-decoration:none;
-font-weight:600;
+
+/* ADS */
+.ads{
+    margin-top:15px;
+    font-size:12px;
+    padding:8px;
+    border-radius:10px;
+    background:linear-gradient(135deg,#4f46e5,#9333ea,#ec4899);
+    box-shadow:0 0 10px rgba(236,72,153,0.5);
+    animation: glow 2s infinite alternate;
 }
+
+.ads a{
+    color:#6cb6ff;
+    text-decoration:none;
+    font-weight:700;
+}
+
+/* ANIMATION */
+@keyframes glow {
+    from { box-shadow:0 0 8px #9333ea; }
+    to   { box-shadow:0 0 14px #ec4899; }
+}
+
 </style>
+
+<!-- Meta Safety -->
+<meta name="robots" content="noindex">
+
+</head>
+<body>
 
 <div class="container">
 
-<!-- CENTERED LOGO -->
-<div class="logo-box">
-<img src="https://i.ibb.co/HThtfpR7/Whats-App-Image-2026-01-30-at-8-54-08-PM.jpg" class="logo">
-</div>
+    <img src="https://i.ibb.co/FbnFTyzn/qd-P6-ULh-Mf-E6-R-X2u02g-GZLU-h-KVANyx-Vh0-RAxz-Mzuz-Hm0-Ti-Cai9a9w-GUb-Tk-Spmh3-EAK-E25-IFQYr-GNiz-HNBq-F.jpg" class="profile">
 
-<h1>TRADE WITH MUNAAF</h1>
-<h2>NIFTY • BANKNIFTY • OPTIONS</h2>
+    <h1>TRADE WITH MUNAAF</h1>
+    <div class="sub">Learn • Practice • Improve Your Trading Skills</div>
 
-<p class="sub">
-Learn stock market basics, strategies & risk management
-</p>
+    <!-- BUTTON 1 -->
+    <a href="https://t.me/+9Jfs4uuwxV42MTU9" class="btn">
+        Join Free Trading Learning Community
+    </a>
 
-<!-- STOCK MARKET VIDEO -->
-<div class="video">
-<iframe src="https://www.youtube.com/embed/2z0cC6gF1y0" allowfullscreen></iframe>
-</div>
+    <div class="points">
+        <span>📊 Basics of NIFTY, BANKNIFTY & SENSEX</span>
+        <span>📘 Trading Education & Concepts</span>
+        <span>⚠️ Risk Management Awareness</span>
+        <span>📢 Market Insights for Learning</span>
+    </div>
 
-<!-- CTA -->
-<a href="thankyou.html" class="btn">
-📘 Get Free Stock Market Guide
-</a>
+    <!-- BUTTON 2 -->
+    <a href="https://t.me/+9Jfs4uuwxV42MTU9" class="btn">
+        Join Free Trading Learning Community
+    </a>
 
-<div class="trust">
-✔ Educational Content Only <br>
-✔ Beginner Friendly Learning
-</div>
+    <div class="footer">
+        Disclaimer: This content is for educational purposes only. 
+        We do not provide investment advice or stock recommendations. 
+        We are not SEBI registered. Stock market investments are subject to market risks.
+    </div>
 
-<div class="points">
-📊 Market Basics Explained<br>
-📘 Strategy Learning<br>
-⚠ Risk Management Guidance<br>
-📢 Market Updates
-</div>
+    <div class="ads">
+        🔥 Powered by 
+        <a href="https://t.me/+3XoqJNLxYHswNTc1" target="_blank">ADSBUILD AGENCY</a>
+    </div>
 
-<a href="thankyou.html" class="btn">
-Start Learning
-</a>
 
-<p class="risk">
-⚠ This content is for educational purposes only. We do not provide financial advice or guarantee returns. Trading involves risk.
-</p>
-
-<div class="footer">
-Powered by 
-<a href="https://t.me/+3XoqJNLxYHswNTc1" target="_blank">
-AdsBuild Agency
-</a>
-</div>
 
 </div>
+
+</body>
+</html>
