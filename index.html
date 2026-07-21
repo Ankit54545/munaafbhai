@@ -1,170 +1,144 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;800&display=swap" rel="stylesheet">
+<title>munaaf - Learning Community</title>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
 
 <style>
+  body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+    background-color: #000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+  }
 
-*{
-    margin:0;
-    padding:0;
-    box-sizing:border-box;
-    font-family:'Poppins', sans-serif;
-}
+  .card {
+    width: 85%;
+    max-width: 340px; 
+    background: #010a0f;
+    border: 1.5px solid #00d2ff;
+    border-radius: 35px;
+    padding: 20px 15px;
+    text-align: center;
+    box-shadow: 0 0 25px rgba(0, 210, 255, 0.15);
+  }
 
-body{
-    background:linear-gradient(135deg,#0f172a,#1e3a8a);
-    display:flex;
-    justify-content:center;
-    align-items:center;
-    min-height:100vh;
-}
+  .profile-img {
+    width: 110px;
+    height: 110px;
+    border-radius: 50%;
+    border: 3px solid #00d2ff;
+    object-fit: cover;
+    margin-top: -5px;
+    box-shadow: 0 0 15px #00d2ff;
+  }
 
-/* CONTAINER */
-.container{
-    width:90%;
-    max-width:380px;
-    background:rgba(255,255,255,0.05);
-    backdrop-filter:blur(15px);
-    border-radius:20px;
-    padding:25px;
-    text-align:center;
-    color:white;
-    box-shadow:0 10px 30px rgba(0,0,0,0.4);
-}
+  h1 {
+    color: #fff;
+    font-size: 20px;
+    margin: 15px 0;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+  }
 
-/* PROFILE IMAGE */
-.profile{
-    width:80px;
-    height:80px;
-    border-radius:50%;
-    border:3px solid #38bdf8;
-    margin-bottom:15px;
-    object-fit:cover;
-}
+  .features {
+    text-align: left;
+    margin: 0 auto;
+    width: 90%;
+  }
 
-/* HEADING */
-h1{
-    font-size:22px;
-    font-weight:700;
-    margin-bottom:8px;
-}
+  .feature-item {
+    color: #ccc;
+    font-size: 13px;
+    padding: 10px 0;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+    display: flex;
+    align-items: center;
+  }
 
-.sub{
-    font-size:13px;
-    opacity:0.8;
-    margin-bottom:15px;
-}
+  .feature-item:last-child { border-bottom: none; }
 
-/* BUTTON */
-a.btn{
-    display:block;
-    width:100%;
-    padding:14px;
-    margin:12px 0;
-    border-radius:50px;
-    font-size:16px;
-    font-weight:600;
-    text-decoration:none;
-    background:linear-gradient(135deg,#38bdf8,#4ade80);
-    color:#000;
-    transition:0.3s;
-}
+  .icon { margin-right: 12px; font-size: 16px; }
 
-a.btn:hover{
-    transform:scale(1.05);
-    box-shadow:0 0 15px #4ade80;
-}
+  .join-text {
+    color: #eee;
+    font-size: 12px;
+    margin: 20px 0 12px;
+    font-weight: 300;
+  }
 
-/* POINTS */
-.points{
-    text-align:left;
-    margin-top:10px;
-    font-size:14px;
-    line-height:1.8;
-}
+  .telegram-btn {
+    display: block;
+    background: linear-gradient(90deg, #00d2ff 0%, #9247ff 100%);
+    color: white;
+    text-decoration: none;
+    padding: 14px;
+    border-radius: 50px;
+    font-weight: bold;
+    font-size: 16px;
+    margin-bottom: 15px;
+    box-shadow: 0 4px 12px rgba(0, 210, 255, 0.3);
+  }
 
-.points span{
-    display:block;
-}
+  .hindi-quote {
+    color: #bbb;
+    font-size: 13px;
+    margin-bottom: 20px;
+    line-height: 1.4;
+  }
 
-/* FOOTER */
-.footer{
-    margin-top:15px;
-    font-size:11px;
-    opacity:0.7;
-    line-height:1.5;
-}
+  .footer-box {
+    border: 1px solid rgba(0, 210, 255, 0.2);
+    border-radius: 12px;
+    padding: 8px;
+    font-size: 11px;
+    color: #888;
+  }
 
-/* ADS */
-.ads{
-    margin-top:15px;
-    font-size:12px;
-    padding:8px;
-    border-radius:10px;
-    background:linear-gradient(135deg,#4f46e5,#9333ea,#ec4899);
-    box-shadow:0 0 10px rgba(236,72,153,0.5);
-    animation: glow 2s infinite alternate;
-}
+  /* Link styling for Agency */
+  .footer-box a { 
+    color: #00d2ff; 
+    font-weight: bold; 
+    text-decoration: none;
+  }
 
-.ads a{
-    color:#6cb6ff;
-    text-decoration:none;
-    font-weight:700;
-}
-
-/* ANIMATION */
-@keyframes glow {
-    from { box-shadow:0 0 8px #9333ea; }
-    to   { box-shadow:0 0 14px #ec4899; }
-}
-
+  .disclaimer {
+    font-size: 9px;
+    color: #444;
+    margin-top: 12px;
+  }
 </style>
-
-<!-- Meta Safety -->
-<meta name="robots" content="noindex">
-
 </head>
 <body>
 
-<div class="container">
+<div class="card">
+  <img src="https://i.ibb.co/jkGbnL4B/IMG-20260417-230748-323.jpg" alt="munaaf" class="profile-img">
 
-    <img src="https://i.ibb.co/FbnFTyzn/qd-P6-ULh-Mf-E6-R-X2u02g-GZLU-h-KVANyx-Vh0-RAxz-Mzuz-Hm0-Ti-Cai9a9w-GUb-Tk-Spmh3-EAK-E25-IFQYr-GNiz-HNBq-F.jpg" class="profile">
+  <h1>munaaf</h1>
 
-    <h1>TRADE WITH MUNAAF</h1>
-    <div class="sub">Learn • Practice • Improve Your Trading Skills</div>
+  <div class="features">
+    <div class="feature-item"><span class="icon">🌐</span> Learning & Educational Sessions</div>
+    <div class="feature-item"><span class="icon">📊</span> Market Concepts & Awareness</div>
+    <div class="feature-item"><span class="icon">💎</span> Chart Reading Concepts</div>
+    <div class="feature-item"><span class="icon">💻</span> Educational Case Discussions</div>
+  </div>
 
-    <!-- BUTTON 1 -->
-    <a href="https://t.me/+9Jfs4uuwxV42MTU9" class="btn">
-        Join Free Telegram
-    </a>
+  <p class="join-text">Join our learning community and grow your knowledge</p>
 
-    <div class="points">
-        <span>📊 Basics of NIFTY, BANKNIFTY & SENSEX</span>
-        <span>📘 Trading Education & Concepts</span>
-        <span>⚠️ Risk Management Awareness</span>
-        <span>📢 Market Insights for Learning</span>
-    </div>
+  <a href="https://telegram.me/+XVN895tGtQY2MjE1" class="telegram-btn">JOIN TELEGRAM</a>
 
-    <!-- BUTTON 2 -->
-    <a href="https://t.me/+9Jfs4uuwxV42MTU9" class="btn">
-        Join Free Telegram
-    </a>
+  <p class="hindi-quote">नियत अच्छी और मेहनत सच्ची हो, तो कामयाबी जरूर मिलती है।</p>
 
-    <div class="footer">
-        Disclaimer: This content is for educational purposes only. 
-        We do not provide investment advice or stock recommendations. 
-        We are not SEBI registered. Stock market investments are subject to market risks.
-    </div>
-
-    <div class="ads">
-        🔥 Powered by 
-        <a href="https://t.me/+3XoqJNLxYHswNTc1" target="_blank">ADSBUILD AGENCY</a>
-    </div>
-
+  <div class="footer-box">
+    This Channel Advertise By <a href="https://telegram.me/+3XoqJNLxYHswNTc1" target="_blank">AD BUILD AGENCY</a>
+  </div>
 <!-- Meta Pixel Code -->
 <script>
 !function(f,b,e,v,n,t,s)
@@ -175,13 +149,13 @@ n.queue=[];t=b.createElement(e);t.async=!0;
 t.src=v;s=b.getElementsByTagName(e)[0];
 s.parentNode.insertBefore(t,s)}(window, document,'script',
 'https://connect.facebook.net/en_US/fbevents.js');
-fbq('init', '1679529493173629');
+fbq('init', '1026912640323604');
 fbq('track', 'PageView');
 </script>
 <noscript><img height="1" width="1" style="display:none"
-src="https://www.facebook.com/tr?id=1679529493173629&ev=PageView&noscript=1"
+src="https://www.facebook.com/tr?id=1026912640323604&ev=PageView&noscript=1"
 /></noscript>
 <!-- End Meta Pixel Code -->
-</div>
 
+</body>
 </html>
